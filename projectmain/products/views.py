@@ -47,6 +47,8 @@ class ProductViewSet(viewsets.ViewSet):
         print(pk)
 
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+     #Not using this anymore | this is being done by consumers   
     def like(self, request, pk=None):
         product = Product.objects.get(id=pk)
         product.likes=+1
